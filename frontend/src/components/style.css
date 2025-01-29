@@ -1,0 +1,164 @@
+/* General Chat Container */
+.chat-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 80vh;
+  width: 50vw;
+  margin: auto;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  font-family: Arial, sans-serif;
+}
+
+/* Messages Section */
+.messages-container {
+  flex-grow: 1;
+  padding: 16px;
+  overflow-y: auto;
+  background-color: #f5f5f5;
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  flex-direction: column;
+
+  position: relative;
+  display: inline-block;
+}
+
+/* Individual Messages */
+.message {
+  display: flex;
+  align-items: flex-start;
+  margin: 10px 0;
+}
+
+.message.you {
+  flex-direction: row-reverse;
+}
+
+.message.other {
+  flex-direction: row;
+}
+
+/* Avatar */
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin: 0 10px;
+  object-fit: cover;
+}
+
+/* Message Content */
+.message-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.message-text {
+  padding: 12px 16px;
+  border-radius: 12px;
+  font-size: 14px;
+  line-height: 1.5;
+  max-width: 60%;
+}
+
+/* Messages sent by the user */
+.message.you .message-text {
+  background-color: #d1e7dd;
+  text-align: right;
+}
+
+/* Messages sent by others */
+.message.other .message-text {
+  background-color: #e9ecef;
+  text-align: left;
+}
+
+/* Input Section */
+.input-container {
+  display: flex;
+  padding: 12px;
+  border-top: 1px solid #ddd;
+  background-color: #fff;
+}
+
+.message-input {
+  flex-grow: 1;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+  outline: none;
+}
+
+.send-button {
+  padding: 12px 20px;
+  margin-left: 8px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.send-button:hover {
+  background-color: #0056b3;
+}
+
+.delete-button {
+  color: white;
+  background-color: red;
+}
+
+.more-options:hover {
+  background-color: #f0f8ff;
+  border-color: #007bff;
+}
+
+/* Container for the text and button */
+.hover-container {
+  position: relative;
+  display: inline-block;
+}
+
+/* The text to hover over */
+.hover-text {
+  font-size: 16px;
+  color: #333;
+  cursor: pointer;
+}
+
+/* The button that appears */
+
+.hover-button {
+  display: none;
+  position: absolute;
+  top: 50%;
+  right: 110%; /* Position the button to the right of the text */
+  transform: translateY(-50%);
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.2s, opacity 0.2s;
+}
+
+/* Show the button when hovering over the text */
+.hover-container:hover .hover-button {
+  display: inline-block;
+  opacity: 1;
+}
+
+/* Button hover effect */
+.hover-button:hover {
+  background-color: #0056b3;
+}
